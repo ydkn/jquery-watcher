@@ -29,9 +29,11 @@ Finally add it to your _application.js_:
 
 ## Usage
 
-    $.watch 'a.fancy', (elem) ->
-      elem.click ->
-        alert('Awesome')
+```coffeescript
+$.watch 'a.fancy', (element) ->
+  element.click ->
+    alert('Awesome')
+```
 
 ## Contributing
 
