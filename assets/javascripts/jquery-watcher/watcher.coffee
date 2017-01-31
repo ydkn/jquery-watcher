@@ -18,9 +18,7 @@ class @JqueryWatcher
       register($(selector))
 
     this.observer.add selector, (node) ->
-      element = $(node)
-
-      register(element)
+      register($(node))
 
 
 jQuery['watcher'] = new JqueryWatcher
