@@ -1,7 +1,7 @@
 class @JqueryWatcher
-  @observer: new JqueryDOMObserver
+  observer: new JqueryDOMObserver
 
-  @watch: (selector, callback) ->
+  add: (selector, callback) ->
     id = Math.floor(Math.random() * 10000000000000001)
 
     register = (element) ->
@@ -23,5 +23,4 @@ class @JqueryWatcher
       register(element)
 
 
-jQuery['watch'] = (selector, callback) ->
-  JqueryWatcher.watch(selector, callback)
+jQuery['watcher'] = new JqueryWatcher

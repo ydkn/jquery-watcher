@@ -30,7 +30,7 @@ Finally add it to your _application.js_:
 ## Usage
 
 ```coffeescript
-$.watch 'a.fancy', (element) ->
+$.watcher.add 'a.fancy', (element) ->
   element.click ->
     alert('Awesome')
 ```
