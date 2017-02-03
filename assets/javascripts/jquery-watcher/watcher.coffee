@@ -5,17 +5,20 @@ class @JqueryWatcher
     id = Math.floor(Math.random() * 10000000000000001)
 
     register = (element) ->
+      return unless element.length
       return if element.data('jquery-watcher-id-' + id + '-watching') == 'true'
 
       element.data(('jquery-watcher-id-' + id + '-watching'), 'true')
 
-      callback(element)
+      $.each(element, callback)
 
     $(document).ready ->
-      register($(selector))
+      $(selector).each ->
+        register($(this))
 
     document.addEventListener 'turbolinks:load', ->
-      register($(selector))
+      $(selector).each ->
+        register($(this))
 
     this.observer.add selector, (node) ->
       register($(node))
