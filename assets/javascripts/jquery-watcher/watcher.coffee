@@ -10,7 +10,11 @@ class @JqueryWatcher
 
       element.data(('jquery-watcher-id-' + id + '-watching'), 'true')
 
-      $.each(element, callback)
+      $.each element, (i, e) ->
+        elem = $(e)
+
+        if elem.length
+          callback(elem)
 
     $(document).ready ->
       $(selector).each ->

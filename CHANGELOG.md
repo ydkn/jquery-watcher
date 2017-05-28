@@ -1,5 +1,9 @@
 # Change Log
 
+## Unreleased
+### Changes
+- ensure callback with jQuery object
+
 ## 0.3.0 (2017-02-03)
 ### Changes
 - Prefilter callback elements
