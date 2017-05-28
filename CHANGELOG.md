@@ -1,6 +1,6 @@
 # Change Log
 
-## Unreleased
+## 0.3.1 (2017-05-28)
 ### Changes
 - ensure callback with jQuery object
 
